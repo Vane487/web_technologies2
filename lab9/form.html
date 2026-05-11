@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="tabs">
+        <button class="tab active" data-t="signup">Реєстрація</button>
+        <button class="tab" data-t="login">Вхід</button>
+    </div>
+
+    <!-- Реєстрація -->
+    <div class="form active" id="signup">
+        <h2>Створити акаунт</h2>
+        <div id="sb" class="banner"></div>
+        <form id="sf" novalidate>
+
+            <div class="row">
+                <div class="g">
+                    <label>Ім'я *</label>
+                    <input id="fn" type="text" placeholder="Іван">
+                    <span class="msg"></span>
+                </div>
+                <div class="g">
+                    <label>Прізвище *</label>
+                    <input id="ln" type="text" placeholder="Коваль">
+                    <span class="msg"></span>
+                </div>
+            </div>
+
+            <div class="g">
+                <label>Email *</label>
+                <input id="em" type="email" placeholder="email@example.com">
+                <span class="msg"></span>
+            </div>
+
+            <div class="g">
+                <label>Телефон *</label>
+                <input id="ph" type="tel" placeholder="+380XXXXXXXXX">
+                <span class="msg"></span>
+            </div>
+
+            <div class="g">
+                <label>Пароль *</label>
+                <div class="pw">
+                    <input id="pw" type="password" placeholder="Мін. 6 символів">
+                    <button type="button" class="eye">👁️</button>
+                </div>
+                <span class="msg"></span>
+            </div>
+
+            <div class="g">
+                <label>Підтвердження пароля *</label>
+                <div class="pw">
+                    <input id="cp" type="password" placeholder="Повторіть пароль">
+                    <button type="button" class="eye">👁️</button>
+                </div>
+                <span class="msg"></span>
+            </div>
+
+            <div class="g">
+                <label>Дата народження *</label>
+                <input id="bd" type="date">
+                <span class="msg"></span>
+            </div>
+
+            <div class="g" id="sg">
+                <label>Стать *</label>
+                <div class="rw">
+                    <label><input type="radio" name="sex" value="male"> Чоловіча</label>
+                    <label><input type="radio" name="sex" value="female"> Жіноча</label>
+                </div>
+                <span class="msg"></span>
+            </div>
+
+            <div class="row">
+                <div class="g">
+                    <label>Країна *</label>
+                    <select id="cn">
+                        <option value="">Оберіть...</option>
+                        <option value="ukraine">Україна</option>
+                        <option value="usa">США</option>
+                        <option value="poland">Польща</option>
+                        <option value="germany">Німеччина</option>
+                        <option value="uk">Велика Британія</option>
+                    </select>
+                    <span class="msg"></span>
+                </div>
+                <div class="g">
+                    <label>Місто *</label>
+                    <select id="ct" disabled>
+                        <option value="">Спочатку країна</option>
+                    </select>
+                    <span class="msg"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Зареєструватися</button>
+        </form>
+    </div>
+
+    <!-- Авторизація -->
+    <div class="form" id="login">
+        <h2>Вхід в акаунт</h2>
+        <div id="lb" class="banner"></div>
+        <form id="lf" novalidate>
+
+            <div class="g">
+                <label>Логін *</label>
+                <input id="lu" type="text" placeholder="Ваш логін">
+                <span class="msg"></span>
+            </div>
+
+            <div class="g">
+                <label>Пароль *</label>
+                <div class="pw">
+                    <input id="lp" type="password" placeholder="Ваш пароль">
+                    <button type="button" class="eye">👁️</button>
+                </div>
+                <span class="msg"></span>
+            </div>
+
+            <label class="cb">
+                <input type="checkbox" id="rm"> Запам'ятати мене
+            </label>
+
+            <button type="submit" class="btn">Увійти</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
